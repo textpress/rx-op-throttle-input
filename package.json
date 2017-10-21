@@ -1,6 +1,6 @@
 {
   "name": "@textpress/rx-op-throttle-input",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "main": "lib/throttle-input.js",
   "repository": "github:textpress/rx-op-throttle-input",
   "license": "MIT",
