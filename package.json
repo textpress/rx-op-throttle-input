@@ -1,0 +1,45 @@
+{
+  "name": "@textpress/rx-op-throttle-input",
+  "version": "0.0.1",
+  "main": "lib/throttle-input.js",
+  "repository": "github:textpress/rx-op-throttle-input",
+  "license": "MIT",
+  "scripts": {
+    "test": "jest",
+    "flow": "flow check",
+    "flow-install-types": "flow-typed install --overwrite",
+    "bump": "gulp bump --part",
+    "build": "yarn build:clean && yarn build:lib && yarn build:flow",
+    "build:clean": "rimraf lib",
+    "build:lib": "babel -d lib src --ignore '**/__tests__/**'",
+    "build:flow": "flow-copy-source -v -i '**/__tests__/**' src lib",
+    "ci-test": "jest",
+    "ci-build": "yarn build",
+    "ci-release-notes": "conventional-github-releaser -p eslint"
+  },
+  "jest": {
+    "testEnvironment": "node",
+    "coverageDirectory": "<rootDir>/.jest-coverage",
+    "testMatch": [
+      "**/__tests__/**/*.test.js"
+    ]
+  },
+  "dependencies": {
+    "rxjs": "^5.5.0"
+  },
+  "devDependencies": {
+    "@textpress/babel-preset-textpress": "^0.3.1",
+    "@textpress/eslint-config-textpress": "^0.0.6",
+    "@textpress/gulp-bump-version": "^0.2.0",
+    "@textpress/rx-marble-testing": "^0.0.2",
+    "conventional-github-releaser": "^1.1.12",
+    "eslint": "^4.9.0",
+    "flow": "^0.2.3",
+    "flow-bin": "^0.57.3",
+    "flow-copy-source": "^1.2.1",
+    "flow-typed": "^2.2.0",
+    "jest": "^21.2.1",
+    "jest-cli": "^21.2.1",
+    "rimraf": "^2.6.2"
+  }
+}
