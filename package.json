@@ -4,6 +4,9 @@
   "main": "lib/throttle-input.js",
   "repository": "github:textpress/rx-op-throttle-input",
   "license": "MIT",
+  "publishConfig": {
+    "access": "public"
+  },
   "scripts": {
     "test": "jest",
     "flow": "flow check",
